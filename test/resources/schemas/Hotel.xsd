@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://travelco.com/schema/Hotel"
+    targetNamespace="http://travelco.com">
+
+	<xs:import schemaLocation="Address.xsd" namespace="http://travelco.com/schema/Address"/>
+
+	<xs:element name="HotelResRQ">
+		<xs:annotation>
+			<xs:documentation>Make a hotel reservation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HotelName" type="xs:string"/>
+				<xs:element name="Date" type="xs:string"/>
+				<xs:element name="NumNights" type="xs:integer"/>
+				<xs:element name="GuestName" type="xs:string"/>
+				<xs:element name="GuestAddress" type="Address"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

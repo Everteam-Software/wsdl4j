@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions 
+    targetNamespace="http://www.ibm.com/wsdl4j/importA.wsdl"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://ws-i.org/profiles/basic/1.1/wsdl11">
+    
+    <import namespace="http://www.ibm.com/wsdl4j/importB.wsdl" location="MyImportB.wsdl"></import>
+    <import namespace="http://www.ibm.com/wsdl4j/importC.wsdl" location="MyImportC.wsdl"></import>
+    <import namespace="http://www.ibm.com/wsdl4j/importB.wsdl" location="MyImportB.wsdl"></import>
+    
+    <wsdl:message name="HelloMessageA">
+        <wsdl:part name="TestPartA" type="xsd:string"/>
+    </wsdl:message>
+</wsdl:definitions>

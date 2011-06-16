@@ -1,0 +1,27 @@
+Our business terms are to release all deliverables under the Common Public license as open source. A copy of this license is attached.
+
+Business terms and conditions for JSR110 deliverables:
+
+Reference Implementation
+========================
+The JSR110 RI will be open source and be released with the Common Public License (CPL). Releasing
+the code implementation as open source will encourage the community to provide availability of the API
+on more platforms, and thus make the API more beneficial to the Java community. The source code will
+be available on the URL site http://www.oss.software.ibm.com and on the appropriate Sun site.
+Even though the source is open, the official JSR110 RI will be controlled by the JSR Maintenance Spec
+Lead. The maintainer will control any source updates as bug fixes or as requests for API modification.
+API modification will require return to the JCP process for update approval.
+The JSR110 RI will not have any 'preferential treatment' as far as API compliance. That also means it
+has no 'inherent' API compliance that can be 'inherited' when making changes to the IBM RI.
+
+Technology Compatibility Kit
+============================
+The TCK will be open source and be released with the Common Public License (CPL). Making it open
+increases the community understanding of the API since the source provides more visibility to the test
+coverage. Availability of the source will help reference implementers understand the test requirements
+better. Over time this will lead to a better implementation. Even though the source is open, there is a maintainer of the official TCK, the JSR Maintenance Spec Lead. Open Source allows others to 'submit'
+changes to the TCK, but doesn't guarantee that they are approved. Compliance will only be by passing
+the TCK approved by the committee appropriate to the approved API. Compliance will be claimed via self certification. In a true open source environment, customers, analysts, consultants, governmental agencies, etc. will all have access to the TCK to see how it works and run implementations through it. Violators of the self-certification and logo use rules will be quickly exposed. This "Market Driven" compliance is far more powerful than trying to maintain control through onerous legal conditions and exceptions. There are no separate business issues involved in providing JSR110 certification. Self-certification is the rule. Enforcement is simple. If after JSR110 is approved,
+someone claims compliance and any user finds otherwise, the TCK provides a relatively objective
+way of proving noncompliance.
+

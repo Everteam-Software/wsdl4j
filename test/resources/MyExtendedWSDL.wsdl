@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions 
+    targetNamespace="http://www.ibm.com/wsdl4j/unit-test.wsdl"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://www.ibm.com/wsdl4j/unit-test.wsdl"
+    xmlns:tnx="http://www.ibm.com/wsdl4j/unit-test.wsdl"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://ws-i.org/profiles/basic/1.1/wsdl11"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    
+    <tnx:partnerLinkType name="purchaseOrderPartnerLinkType">
+		<tnx:role name="seller">
+			<tnx:portType name="pos:poSubmissionPortType"/>
+		</tnx:role>	
+	</tnx:partnerLinkType>
+    
+    <wsdl:message name="HelloMessage">
+        <wsdl:part name="TestPart" type="xsd:string"/>
+    </wsdl:message>
+    
+    <wsdl:message name="HelloMessage2">
+        <wsdl:part name="TestPart2" type="xsd:string"/>
+    </wsdl:message>
+    
+	<tnx:partnerLinkType name="purchaseOrderPartnerLinkType1">
+		<tnx:role name="seller">
+			<tnx:portType name="pos:poSubmissionPortType"/>
+		</tnx:role>	
+	</tnx:partnerLinkType>
+</wsdl:definitions>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="TravelCo"
+    targetNamespace="http://travelco.com"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://travelco.com"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd1="http://travelco.com/schema/Flight">
+     
+    <types>
+      <xsd:schema>
+        <xsd:element name="Custname" type="xsd:string"/>
+        <xsd:element name="Response" type="xsd:string"/>
+        <xsd:import schemaLocation="Flight.xsd" namespace="http://travelco.com/schema/Flight"/>
+        <xsd:include schemaLocation="Hotel.xsd"/>
+        <xsd:redefine schemaLocation="Address.xsd">
+          <xsd:complexType name="address_struct">
+            <xsd:complexContent>
+              <xsd:extension base="address_struct">
+                <xsd:sequence>
+                  <xsd:element name="Country" type="string"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:redefine>
+      </xsd:schema>
+    </types> 
+
+    <message name="FlightResRQMsg">
+        <part element="xsd:Custname" name="Custname"/>
+        <part element="xsd1:FlightResRQ" name="FlightResRQ"/>
+    </message>
+    <message name="FlightResRSMsg">
+        <part element="xsd1:FlightResRS" name="FlightResRS"/>
+    </message>
+    <message name="HotelResRQMsg">
+        <part element="xsd:Custname" name="Custname"/>
+        <part element="xsd:HotelResRQ" name="HotelResRQ"/>
+    </message>
+    <message name="HotelResRSMsg">
+        <part element="xsd:Response" name="Response"/>
+    </message>
+    
+    <portType name="TravelBooking">
+        <operation name="FlightReservation">
+            <input message="tns:FlightResRQMsg"/>
+            <output message="tns:FlightResRSMsg"/>
+        </operation>
+        <operation name="HotelReservation">
+            <input message="tns:HotelResRQMsg"/>
+            <output message="tns:HotelResRSMsg"/>
+        </operation>
+    </portType>
+    
+</definitions>

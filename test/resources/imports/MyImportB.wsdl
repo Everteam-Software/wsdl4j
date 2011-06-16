@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions 
+    targetNamespace="http://www.ibm.com/wsdl4j/importA.wsdl"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://ws-i.org/profiles/basic/1.1/wsdl11">
+
+    <wsdl:message name="HelloMessageB">
+        <wsdl:part name="TestPartB" type="xsd:string"/>
+    </wsdl:message>
+</wsdl:definitions>

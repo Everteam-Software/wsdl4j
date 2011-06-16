@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<wsdl:definitions 
+    targetNamespace="http://example.org/one"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://example.org/one"
+    xmlns:amz="http://webservices.amazon.com/AWSECommerceService/2006-09-18"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <!--
+      This WSDL is used to recreate the NPE reported by WSDL4J Sourceforge Tracker 1571310. 
+      It is also used to test the fix, by ensuring that the NPE does not occur. 
+      It should be used with reader.readWSDL(String,Element) or readWSDL(String,Document). 
+      Use an XML parser (e.g. Xerces) in the test client to parse this WSDL document, then 
+      pass the DOM Element or Document to one of these readWSDL methods. Specify null for 
+      the baseURI String arg to these methods.
+      
+      Prior to the 1571310 fix the null baseURI prevents the importDefs Map is WSDLReaderImpl
+      from being initialized and a NPE occurs on importDefs.get(..) in the parseImport method.
+      After the fix is applied, importDefs is always initialized so the NPE does not occur.
+      
+      NOTE: this WSDL imports another WSDL from an HTTP URL, so a network connection must be 
+      present for this test to succeed (or a WSDLLocator could be used to resolve the URL
+      to a locally cached copy).
+    -->
+    
+    <wsdl:import namespace="http://webservices.amazon.com/AWSECommerceService/2006-09-18" 
+                 location="http://webservices.amazon.com/AWSECommerceService/AWSECommerceService.wsdl"/>
+    
+    <wsdl:service name="HelloService">
+            <wsdl:port name="HelloPort" binding="amz:AWSECommerceServiceBinding">
+              <soap:address location="http://soap.amazon.com/onca/soap?Service=AWSECommerceService"/>
+            </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TestCDefinitionName" 
+  targetNamespace="TestCDefinitionNS" 
+  TestCTypes:AttrName="TestCDefinitionValue" 
+  xmlns:tns="TestCDefinitionNS" 
+  xmlns:TestCTypes="ExtAttrNS" 
+  xmlns:TestCOperation="ExtAttrNS" 
+  xmlns:TestCPort="ExtAttrNS" 
+  xmlns:TestCImport="ExtAttrNS" 
+  xmlns:TestCBindingOperation="ExtAttrNS" 
+  xmlns:TestCBindingInput="ExtAttrNS" 
+  xmlns:TestCService="ExtAttrNS" 
+  xmlns:TestCDefinition="ExtAttrNS" 
+  xmlns:TestCBindingOutput="ExtAttrNS" 
+  xmlns:TestCPart="ExtAttrNS" 
+  xmlns:TestCBindingFault="ExtAttrNS" 
+  xmlns:TestCBinding="ExtAttrNS" 
+  xmlns:TestCMessage="ExtAttrNS" 
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns:TestCPortType="ExtAttrNS">
+
+  <wsdl:documentation>TestCDefinition Documentation</wsdl:documentation>
+
+  <wsdl:types TestCTypes:AttrName="TestCTypesValue">
+    <wsdl:documentation>TestCTypes Documentation</wsdl:documentation>
+    <TestCTypes:ExtElement xmlns:TestCTypes="TestCTypes">TestCTypes Extensibility Element</TestCTypes:ExtElement>
+  </wsdl:types>
+  
+  <wsdl:message name="TestCMessageName" TestCTypes:AttrName="TestCMessageValue">
+    <wsdl:documentation>TestCMessage Documentation</wsdl:documentation>
+    <wsdl:part name="TestCPartName" element="TestCPartElementName" type="TestCPartTypeName" TestCTypes:AttrName="TestCPartValue">
+      <wsdl:documentation>TestCPart Documentation</wsdl:documentation>
+      <TestCPart:ExtElement xmlns:TestCPart="TestCPart">TestCPart Extensibility Element</TestCPart:ExtElement>
+    </wsdl:part>
+    <TestCMessage:ExtElement xmlns:TestCMessage="TestCMessage">TestCMessage Extensibility Element</TestCMessage:ExtElement>
+  </wsdl:message>
+  
+  <wsdl:portType name="TestCPortTypeName" TestCTypes:AttrName="TestCPortTypeValue">
+   <wsdl:documentation>TestCPortType Documentation</wsdl:documentation>
+    <TestCPortType:ExtElement xmlns:TestCPortType="TestCPortType">TestCPortType Extensibility Element</TestCPortType:ExtElement>
+  </wsdl:portType>
+  
+  <wsdl:binding name="TestCBindingName" type="tns:TestCPortTypeName">
+    <wsdl:documentation>TestCBinding Documentation</wsdl:documentation>
+    <TestCBinding:ExtElement xmlns:TestCBinding="TestCBinding">TestCBinding Extensibility Element</TestCBinding:ExtElement>
+    <wsdl:operation name="TestCBindingOperation" TestCTypes:AttrName="TestCBindingOperationValue">
+      <wsdl:documentation>TestCBindingOperation Documentation</wsdl:documentation>
+      <TestCBindingOperation:ExtElement xmlns:TestCBindingOperation="TestCBindingOperation">TestCBindingOperation Extensibility Element</TestCBindingOperation:ExtElement>
+      <wsdl:input name="TestCBindingInput" TestCTypes:AttrName="TestCBindingInputValue">
+        <wsdl:documentation>TestCBindingInput Documentation</wsdl:documentation>
+        <TestCBindingInput:ExtElement xmlns:TestCBindingInput="TestCBindingInput">TestCBindingInput Extensibility Element</TestCBindingInput:ExtElement>
+      </wsdl:input>
+      <wsdl:output name="TestCBindingOutput">
+        <wsdl:documentation>TestCBindingOutput Documentation</wsdl:documentation>
+        <TestCBindingOutput:ExtElement xmlns:TestCBindingOutput="TestCBindingOutput">TestCBindingOutput Extensibility Element</TestCBindingOutput:ExtElement>
+      </wsdl:output>
+      <wsdl:fault name="TestCBindingFault" TestCTypes:AttrName="TestCBindingFaultValue">
+        <wsdl:documentation>TestCBindingFault Documentation</wsdl:documentation>
+        <TestCBindingFault:ExtElement xmlns:TestCBindingFault="TestCBindingFault">TestCBindingFault Extensibility Element</TestCBindingFault:ExtElement>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  
+  <wsdl:service name="TestCServiceName" TestCTypes:AttrName="TestCServiceValue">
+    <wsdl:documentation>TestCService Documentation</wsdl:documentation>
+    <wsdl:port name="TestCServicePortName" binding="tns:TestCBindingName" TestCTypes:AttrName="TestCServicePortValue">
+      <wsdl:documentation>TestCServicePort Documentation</wsdl:documentation>
+      <TestCServicePort:ExtElement xmlns:TestCServicePort="TestCServicePort">TestCServicePort Extensibility Element</TestCServicePort:ExtElement>
+    </wsdl:port>
+    <TestCService:ExtElement xmlns:TestCService="TestCService">TestCService Extensibility Element</TestCService:ExtElement>
+  </wsdl:service>
+  
+  <TestCDefinition:ExtElement xmlns:TestCDefinition="TestCDefinition">TestCDefinition Extensibility Element</TestCDefinition:ExtElement>
+    
+</wsdl:definitions>

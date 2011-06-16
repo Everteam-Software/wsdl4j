@@ -1,0 +1,83 @@
+Before we post your Spec's Final Release, we need to have the answers to the 
+following questions on file here in the PMO:
+
+1. Make sure the PMO has an HTML, PDF, or ZIP version of the Final Specification.
+
+  The files JSR110_final_approval_ballot.pdf and jwsdl-api.zip contain the specification.
+  
+2. Where is the final Specification License?
+
+  In the license.txt file.
+
+  (The files JSR110_final_approval_ballot.pdf, jwsdl-api.zip and license.txt are all available at: http://www-124.ibm.com/developerworks/downloads/index.php?group_id=68 under the "JWSDL Final Approval Ballot" package.)
+
+3. What are the terms under which the Reference Implementation and Technology
+    Compatibility Kit will be licensed?  
+
+  The file terms.txt contains the terms for both the Reference Implementation (WSDL4J) and the Technology Compatibility Kit.
+
+4. Where is the Reference Implementation posted for the Final Approval Ballot? Where will it be posted for Final Release?
+
+  It is posted for the FAB (and will remain there after the Final Release) at:
+http://www-124.ibm.com/developerworks/downloads/index.php?group_id=68 under the "WSDL4J" package. The same page can be reached by going to: http://www-124.ibm.com/developerworks/projects/wsdl4j/ and clicking on the "Downloads" tab.
+
+5. Where is the Technology Compatibility Kit posted for the Final Approval Ballot? Where will it be posted for the Final Release?
+
+  It is posted for the FAB (and will remain there after the Final Release) at: http://www-124.ibm.com/developerworks/downloads/?group_id=120.
+
+
+6. Describe the first level TCK appeals process that you have established.
+
+  The file appeals.pdf describes the appeals process.
+
+7. Who will be the Maintenance Lead?
+     Provide name, postal address, e-mail address, phone number.
+
+  The Maintenance Lead will be:
+
+    Matthew J. Duftler
+    19 Skyline Drive
+    Hawthorne, NY 10532
+    duftler@us.ibm.com
+    (914) 784-6084
+
+8. What is the email alias to which comments on the spec should be sent?
+
+  jsr110-eg-disc@yahoogroups.com
+
+9. What will be the public location of your change log? 
+
+  The change log will be hosted at: http://www-124.ibm.com/developerworks/projects/wsdl4j
+
+10. Does the Expert Group agree that you are ready to go Final?
+
+  yes
+       
+11. Does the Reference Implementation pass the Technology Compatibility Kit?
+
+  yes
+
+12. Can the Specification be implemented independently of the Reference
+       Implementation?
+
+  yes
+
+13. Assuming that your Final Approval Ballot is successful, what is the date you will publish your Final Release?
+
+  Immediately following the Final Approval Ballot.
+
+
+
+Additional Questions (in email from Liz Cadd)
+=============================================
+
+        1. Does the specification include any software codes?
+           Yes ___X___     No __________ if no, please proceed to 3.    
+
+        2. Does the specification include software codes in the following format:
+           Binary :      Yes _______   No ____X_____
+           Source (compilable) : Yes _______   No ____X_____
+           Javadocs :      Yes ___X___ No __________   
+
+        3. Do the codes or the spec call on, contain, use or demonstrate encryption technology?        
+           Yes _________ No ___X____

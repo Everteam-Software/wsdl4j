@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<definitions targetNamespace="http://www.ibm.com/namespace/wsif/samples/ab"
+             xmlns:tns="http://www.ibm.com/namespace/wsif/samples/ab"
+             xmlns:typens="urn:xml-soap-address-demo"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <import namespace="http://www.ibm.com/namespace/wsif/samples/ab"
+          location="AddressBook_1.wsdl"/>
+
+  <!-- binding declns -->
+  <binding name="SOAPBinding" type="tns:AddressBook">
+    <soap:binding style="rpc"
+                  transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="addEntry">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded"
+                   namespace="urn:AddressFetcher"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded"
+                   namespace="urn:AddressFetcher"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getAddressFromName">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded"
+                   namespace="urn:AddressFetcher"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded"
+                   namespace="urn:AddressFetcher"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+
+  <!-- service decln -->
+  <service name="AddressBookService">
+    <port name="SOAPPort" binding="tns:SOAPBinding">
+      <soap:address location="http://localhost:8080/soap/servlet/rpcrouter"/>
+    </port>
+  </service>
+
+</definitions>
+

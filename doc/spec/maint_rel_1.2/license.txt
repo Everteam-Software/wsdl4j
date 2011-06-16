@@ -1,0 +1,13 @@
+Permission to copy and display the Java APIs for WSDL Specification, in any medium without fee or royalty is hereby granted, provided that you include the following on ALL copies of the Java APIs for WSDL Specification, or portions thereof, that you make:
+
+1. A link or URL to the Java APIs for WSDL Specification at this location: http://sourceforge.net/projects/wsdl4j/
+2. The copyright notice as shown in the Java APIs for WSDL Specification.
+
+Except for the limited copyright license granted above, the material contained herein is not a license, either expressly or impliedly, to any intellectual property owned or controlled by any of the authors or developers of this material. The material contained herein is provided on an "AS IS" basis and to the maximum extent permitted by applicable law, this material is provided AS IS AND WITH ALL FAULTS, and the authors and developers of this material hereby disclaim all other warranties and conditions, either express, implied or statutory, including, but not limited to, any (if any) implied warranties, duties or conditions of merchantability, of fitness for a particular purpose, of accuracy or completeness of responses, of results, of workmanlike effort, of lack of viruses, and of lack of negligence. ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THIS MATERIAL.
+
+IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL BE LIABLE TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR SERVICES, LOST PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY INCIDENTAL, CONSEQUENTIAL, DIRECT, INDIRECT, OR SPECIAL DAMAGES WHETHER UNDER CONTRACT, TORT, WARRANTY, OR OTHERWISE, ARISING IN ANY WAY OUT OF THIS OR ANY OTHER AGREEMENT RELATING TO THIS MATERIAL, WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+The name and trademarks of the Authors may NOT be used in any manner, including advertising or publicity pertaining to the Java APIs for WSDL Specification or its contents without specific, written prior permission. Title to copyright in the Java APIs for WSDL Specification will at all times remain with the Authors.
+
+No other rights are granted by implication, estoppel or otherwise.

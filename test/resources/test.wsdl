@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TestDefinitionName" targetNamespace="TestDefinitionNS" TestTypes:AttrName="TestDefinitionValue" xmlns:TestTypes="ExtAttrNS" xmlns:TestOperation="ExtAttrNS" xmlns:TestPort="ExtAttrNS" xmlns:TestImport="ExtAttrNS" xmlns:TestBindingOperation="ExtAttrNS" xmlns:TestBindingInput="ExtAttrNS" xmlns:TestService="ExtAttrNS" xmlns:TestDefinition="ExtAttrNS" xmlns:TestBindingOutput="ExtAttrNS" xmlns:TestPart="ExtAttrNS" xmlns:TestBindingFault="ExtAttrNS" xmlns:TestBinding="ExtAttrNS" xmlns:TestMessage="ExtAttrNS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:TestPortType="ExtAttrNS">
+<wsdl:documentation>TestDefinition Documentation</wsdl:documentation>
+  <wsdl:import namespace="testImportNSURI" location="imports/MyImportA.wsdl" TestTypes:AttrName="TestImportValue">
+<wsdl:documentation>TestImport Documentation</wsdl:documentation>
+    <TestImport:ExtElement xmlns:TestImport="TestImport">TestImport Extensibility Element</TestImport:ExtElement>
+    </wsdl:import>
+  <wsdl:types TestTypes:AttrName="TestTypesValue">
+<wsdl:documentation>TestTypes Documentation</wsdl:documentation>
+    <TestTypes:ExtElement xmlns:TestTypes="TestTypes">TestTypes Extensibility Element</TestTypes:ExtElement>
+  </wsdl:types>
+  <wsdl:message name="TestMessageName" TestTypes:AttrName="TestMessageValue">
+<wsdl:documentation>TestMessage Documentation</wsdl:documentation>
+    <wsdl:part name="TestPartName" element="TestPartElementName" type="TestPartTypeName" TestTypes:AttrName="TestPartValue">
+<wsdl:documentation>TestPart Documentation</wsdl:documentation>
+    <TestPart:ExtElement xmlns:TestPart="TestPart">TestPart Extensibility Element</TestPart:ExtElement>
+    </wsdl:part>
+    <TestMessage:ExtElement xmlns:TestMessage="TestMessage">TestMessage Extensibility Element</TestMessage:ExtElement>
+  </wsdl:message>
+  <wsdl:portType name="TestPortTypeName" TestTypes:AttrName="TestPortTypeValue">
+<wsdl:documentation>TestPortType Documentation</wsdl:documentation>
+    <TestPortType:ExtElement xmlns:TestPortType="TestPortType">TestPortType Extensibility Element</TestPortType:ExtElement>
+  </wsdl:portType>
+  <wsdl:binding name="TestBindingName" type="TestPortTypeName">
+<wsdl:documentation>TestBinding Documentation</wsdl:documentation>
+    <TestBinding:ExtElement xmlns:TestBinding="TestBinding">TestBinding Extensibility Element</TestBinding:ExtElement>
+    <wsdl:operation name="TestBindingOperation" TestTypes:AttrName="TestBindingOperationValue">
+<wsdl:documentation>TestBindingOperation Documentation</wsdl:documentation>
+    <TestBindingOperation:ExtElement xmlns:TestBindingOperation="TestBindingOperation">TestBindingOperation Extensibility Element</TestBindingOperation:ExtElement>
+      <wsdl:input name="TestBindingInput" TestTypes:AttrName="TestBindingInputValue">
+<wsdl:documentation>TestBindingInput Documentation</wsdl:documentation>
+    <TestBindingInput:ExtElement xmlns:TestBindingInput="TestBindingInput">TestBindingInput Extensibility Element</TestBindingInput:ExtElement>
+      </wsdl:input>
+      <wsdl:output name="TestBindingOutput">
+<wsdl:documentation>TestBindingOutput Documentation</wsdl:documentation>
+    <TestBindingOutput:ExtElement xmlns:TestBindingOutput="TestBindingOutput">TestBindingOutput Extensibility Element</TestBindingOutput:ExtElement>
+      </wsdl:output>
+      <wsdl:fault name="TestBindingFault" TestTypes:AttrName="TestBindingFaultValue">
+<wsdl:documentation>TestBindingFault Documentation</wsdl:documentation>
+    <TestBindingFault:ExtElement xmlns:TestBindingFault="TestBindingFault">TestBindingFault Extensibility Element</TestBindingFault:ExtElement>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestServiceName" TestTypes:AttrName="TestServiceValue">
+<wsdl:documentation>TestService Documentation</wsdl:documentation>
+    <wsdl:port name="TestPortName" binding="TestBindingName" TestTypes:AttrName="TestPortValue">
+<wsdl:documentation>TestPort Documentation</wsdl:documentation>
+    <TestPort:ExtElement xmlns:TestPort="TestPort">TestPort Extensibility Element</TestPort:ExtElement>
+    </wsdl:port>
+    <TestService:ExtElement xmlns:TestService="TestService">TestService Extensibility Element</TestService:ExtElement>
+  </wsdl:service>
+    <TestDefinition:ExtElement xmlns:TestDefinition="TestDefinition">TestDefinition Extensibility Element</TestDefinition:ExtElement>
+</wsdl:definitions>

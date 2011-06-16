@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wsdl:definitions
+  targetNamespace="http://example.com"
+  xmlns:tns="http://example.com"
+  xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <wsdl:types>
+    <xs:schema
+      targetNamespace="http://example.com"
+      blockDefault="#all"
+      elementFormDefault="qualified">
+      <xs:element name="HelloResponse" type="xs:string" />
+    </xs:schema>
+  </wsdl:types>
+ 
+  <wsdl:message name="HelloWorldMessageIn" />
+ 
+  <wsdl:message name="HelloWorldMessageOut">
+    <wsdl:part name="parameters" element="tns:HelloResponse"/>
+  </wsdl:message>
+ 
+  <wsdl:portType name="Test">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldMessageIn" />
+      <wsdl:output message="tns:HelloWorldMessageOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+ 
+  <wsdl:binding name="TestSoap12Binding" type="tns:Test">
+    <wsoap12:binding
+      transport="http://schemas.xmlsoap.org/soap/http " 
+      style="document" />
+    <wsdl:operation name="HelloWorld">
+      <wsoap12:operation
+        soapAction="http://example.com/Test/HelloWorldRequest"
+        soapActionRequired="true" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+ 
+  <wsdl:service name="HelloWorld">
+    <wsdl:port name="HelloWorldSoap12"
+               binding="tns:TestSoap12Binding">
+      <wsoap12:address
+        location="http://localhost/helloworld" />
+    </wsdl:port>
+  </wsdl:service>
+ 
+</wsdl:definitions>
+ 
+
