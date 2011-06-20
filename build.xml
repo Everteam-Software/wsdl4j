@@ -25,7 +25,7 @@ Build Instructions:
 
 Main targets:
 
- - compile  -> creates the "wsdl4j.jar" package in "./build/lib"
+ - compile  -> creates the "wsdl4j-version.jar" package in "./build/lib"
  - javadocs -> creates the javadocs in "./build/javadocs"
  - dist     -> creates the complete binary distribution
  - srcdist  -> creates the complete src distribution
@@ -41,7 +41,7 @@ Author:
   <target name="init">
     <property name="name" value="wsdl4j"/>
     <property name="Name" value="WSDL4J"/>
-    <property name="wsdl4j.version" value="1.6.2"/>
+    <property name="wsdl4j.version" value="1.6.2.intalio1"/>
     <property name="wsdl4j.version.underscore" value="1_6_2"/>
     <property name="jwsdl.version" value="1.2"/>
     <property name="jwsdl.version.underscore" value="1_2"/>
@@ -87,7 +87,7 @@ Author:
     <available property="junit.present" classname="junit.framework.TestCase"/>
 
     <uptodate property="javadoc.required"
-              targetfile="${build.lib}/${name}.jar">
+              targetfile="${build.lib}/${name}-${wsdl4j.version}.jar">
       <srcfiles dir="${build.dir}" includes="**/*.html"/>
     </uptodate>
 
@@ -123,7 +123,7 @@ Author:
     </javac>
 
     <mkdir dir="${build.lib}"/>
-    <jar jarfile="${build.lib}/${name}.jar" basedir="${build.dest}">
+    <jar jarfile="${build.lib}/${name}-${wsdl4j.version}.jar" basedir="${build.dest}">
       <exclude name="javax/xml/**"/>
 
       <manifest>
@@ -150,7 +150,7 @@ Author:
     </jar>
 
     <uptodate property="javadoc.required"
-              targetfile="${build.lib}/${name}.jar">
+              targetfile="${build.lib}/${name}-${wsdl4j.version}.jar">
       <srcfiles dir="${build.dir}" includes="**/*.html"/>
     </uptodate>
   </target>
@@ -283,7 +283,7 @@ Author:
                    value="com.ibm.wsdl.factory.WSDLFactoryImpl"/>
 
       <classpath>
-        <pathelement location="${build.lib}/${name}.jar"/>
+        <pathelement location="${build.lib}/${name}-${wsdl4j.version}.jar"/>
         <pathelement location="${build.lib}/qname.jar"/>
         <pathelement location="test/lib/jwsdltck.jar"/>
       </classpath>
