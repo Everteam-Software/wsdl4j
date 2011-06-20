@@ -42,7 +42,7 @@ public class WSDLFactoryImpl extends WSDLFactory
    */
   public WSDLReader newWSDLReader()
   {
-    return new WSDLCachedReader(new WSDLReaderImpl());
+    return new CachedWSDLReader(new WSDLReaderImpl());
   }
 
   /**

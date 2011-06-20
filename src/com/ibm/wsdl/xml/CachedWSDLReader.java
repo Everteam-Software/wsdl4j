@@ -1,5 +1,8 @@
 package com.ibm.wsdl.xml;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,10 +16,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 
-public class WSDLCachedReader implements WSDLReader {
+public class CachedWSDLReader implements WSDLReader {
 	private WSDLReader proxy;
 
-	public WSDLCachedReader(WSDLReader proxy) {
+	public CachedWSDLReader(WSDLReader proxy) {
 		super();
 		this.proxy = proxy;
 	}
@@ -86,13 +89,24 @@ public class WSDLCachedReader implements WSDLReader {
 	
 	public Definition tryCachedWSDL(Definition def) {
 		synchronized (cachedWSDLs) {
-			String uri = def.getDocumentBaseURI();
-			if (cachedWSDLs.containsKey(uri)) {
-				return cachedWSDLs.get(uri);
+			String key = sha(def.getDocumentBaseURI() + def.toString());
+			if (cachedWSDLs.containsKey(key)) {
+				return cachedWSDLs.get(key);
 			} else {
-				cachedWSDLs.put(uri, def);
+				cachedWSDLs.put(key, def);
 				return def;
 			}
 		}
+	}
+	
+	private String sha(String input) {
+	    try {
+	        MessageDigest md = MessageDigest.getInstance("SHA");
+	        byte[] digest = md.digest(input.getBytes());
+	        BigInteger bigInt = new BigInteger(1, digest);
+            return bigInt.toString(16);
+	    } catch (NoSuchAlgorithmException e) {
+	        throw new RuntimeException(e.getMessage());
+	    }
 	}
 }

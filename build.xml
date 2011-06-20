@@ -41,7 +41,7 @@ Author:
   <target name="init">
     <property name="name" value="wsdl4j"/>
     <property name="Name" value="WSDL4J"/>
-    <property name="wsdl4j.version" value="1.6.2.intalio1"/>
+    <property name="wsdl4j.version" value="1.6.2.intalio2"/>
     <property name="wsdl4j.version.underscore" value="1_6_2"/>
     <property name="jwsdl.version" value="1.2"/>
     <property name="jwsdl.version.underscore" value="1_2"/>
